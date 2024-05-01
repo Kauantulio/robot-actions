@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 20
-        
+
     - name: Setup Python
       uses: actions/setup-python@v5.1.0
       with:
@@ -35,3 +35,6 @@ jobs:
     
     - name: Browser Init
       run: rfbrowser init
+
+    - name: Run E2E Tests
+      run: robot -d ./logs -i smoke tests
