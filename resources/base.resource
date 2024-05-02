@@ -1,13 +1,13 @@
 *** Settings ***
-Documentation       Main
+Documentation    Main
 
-Library             Browser
-Resource            ./actions.resource
+Library     Browser
+Resource    ./actions.resource
 
 *** Variables ***
-${BASE_URL}         https://loginxp.vercel.app
-${BROWSER}          chromium
-${IS_HEADLESS}      True
+${BASE_URL}       https://loginxp.vercel.app
+${BROWSER}        chromium
+${IS_HEADLESS}    True
 
 *** Keywords ***
 Start Browser

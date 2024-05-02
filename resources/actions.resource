@@ -1,15 +1,15 @@
 *** Settings ***
-Documentation       Camada de ações da funcionalidade de login
+Documentation    Camada de ações da funcionalidade de login
 
-Library             Browser
+Library    Browser
 
 *** Keywords ***
 Submit Credentials
     [Arguments]    ${user}    ${pass}
 
-    Fill Text    css=[name=user]    ${user}
-    Fill Text    css=[name=pass]    ${pass}
-    Click    css=button >> text=Entrar
+    Fill Text    css=[name=user]              ${user}
+    Fill Text    css=[name=pass]              ${pass}
+    Click        css=button >> text=Entrar
 
 Toast have text
     [Arguments]    ${target}
@@ -19,10 +19,10 @@ Toast have text
     Wait For Elements State    css=${selector}    visible    5
     Get Text                   css=${selector}    equal      ${target}
 
-    Take Screenshot        selector=${selector}
+    Take Screenshot    selector=${selector}
 
  Modal have text
-    [Arguments]    ${target}
+                    [Arguments]    ${target}
 
     ${ele}    Set Variable    css=#swal2-title
 
